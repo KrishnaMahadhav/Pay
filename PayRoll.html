@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+<h3>Simple Payroll Program using manipulating string and numbers </h3>
+Enter Employee's First Name: <input type="text" size="40" ng-model="emp_name" ><br>
+Enter Employee's Last Name: <input type="text" size="40" ng-model="emp_lname" ><br>
+Employee ID:<input type="text" size="40" ng-model="emp_id" required/><br>
+Gender:<input type="radio" name="gender" value="Male" ng-model="emp_gender"> Male
+<input type="radio" name="gender" value="Female" ng-model="emp_gender"> Female <br><br>
+Enter Number of Day's Worked: <input type="number" size="10" ng-model="days_worked"><br>
+Enter Daily Rate: <input type="number" size="10" ng-model="daily_rate" ><br>
+-----------------------------------------------------------------------------------------<br>
+Employee Name:{{emp_name+" "+emp_lname| uppercase}} <br>
+Employee ID:{{emp_id}}<br>
+Gender:{{emp_gender}}<br>
+Number of Day's Worked:{{days_worked}}<br>
+Rate Per Day:{{daily_rate}}<br>
+Gross Salary : {{ (days_worked * daily_rate)}} rs
+</body> 
+</html>
